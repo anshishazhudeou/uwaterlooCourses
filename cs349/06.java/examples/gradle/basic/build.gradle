@@ -1,0 +1,3 @@
+apply plugin : 'application'
+mainClassName = "Hello"
+sourceSets.main.java.srcDirs = ['src']
