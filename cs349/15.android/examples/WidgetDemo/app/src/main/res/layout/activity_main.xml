@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ca.uwaterloo.cs347.widgetdemo.MainActivity">
+
+    <TextView
+            android:id="@+id/name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/name"
+            android:layout_alignBottom="@+id/name"
+            android:layout_toLeftOf="@+id/name"
+            android:layout_toStartOf="@+id/name"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="end"
+            android:text="@string/name"
+            tools:ignore="RelativeOverlap"/>
+
+    <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="">
+        <requestFocus/>
+    </EditText>
+
+
+
+    <TextView
+            android:id="@+id/attend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name_title"
+            android:layout_alignStart="@+id/name_title"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="40dp"
+            android:text="@string/attend"
+            tools:ignore="RelativeOverlap"/>
+
+    <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/attend"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+    >
+
+        <RadioButton
+                android:id="@+id/radio_yes"
+                android:text="@string/yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+        />
+        <RadioButton
+                android:id="@+id/radio_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+                android:id="@+id/radio_maybe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/maybe"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+
+    <TextView
+            android:id="@+id/session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name_title"
+            android:layout_alignStart="@+id/name_title"
+            android:layout_below="@+id/radio_group"
+            android:layout_marginTop="40dp"
+            android:text="@string/session"
+            tools:ignore="RelativeOverlap"/>
+
+    <LinearLayout
+            android:id="@+id/check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/session"
+            android:layout_alignLeft="@+id/name"
+            android:layout_alignStart="@+id/name"
+            android:orientation="vertical">
+
+        <CheckBox
+                android:id="@+id/checkbox_morning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/morning"
+                android:onClick="onCheckboxClicked"
+        />
+
+        <CheckBox
+                android:id="@+id/checkbox_afternoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/afternoon"
+                android:onClick="onCheckboxClicked"
+        />
+    </LinearLayout>
+
+
+    <TextView
+            android:id="@+id/dayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name_title"
+            android:layout_alignStart="@+id/name_title"
+            android:layout_below="@+id/check_box"
+            android:layout_marginTop="40dp"
+            android:text="@string/day_of_week"
+            tools:ignore="RelativeOverlap"/>
+
+
+    <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name"
+            android:layout_alignStart="@+id/name"
+            android:layout_alignRight="@+id/name"
+            android:layout_alignEnd="@+id/name"
+
+            android:layout_below="@+id/dayOfWeek"
+    />
+
+
+
+    <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="SendMessage"
+            android:text="@string/confirm"/>
+
+
+
+</RelativeLayout>
