@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">SwitchPages</string>
-    <string name="send">SEND</string>
-    <string name="v5">Lollipop</string>
-    <string name="v6">Marshmallow</string>
-    <string name="v7">Nougat</string>
-    <string name="v8">Oreo</string>
-</resources>

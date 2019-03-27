@@ -1,3 +1,0 @@
-apply plugin : 'application'
-mainClassName = "com.uwaterloo.cs349.Main"
-sourceSets.main.java.srcDirs = ['src']
