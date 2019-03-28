@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">WidgetDemo</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="name">Name</string>
+
+    <string name="attend">Attending?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="maybe">Maybe</string>
+
+    <string name="session">Session?</string>
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+
+    <string name="day_of_week">Preferred day</string>
+
+    <string-array name="week_array">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
+</resources>
