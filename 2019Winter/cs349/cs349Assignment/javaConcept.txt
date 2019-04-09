@@ -1,0 +1,3 @@
+static
+The very common beginner mistake is when you try to use a class property "statically" without making an instance of that class
+You can't call something that doesn't exist. Since you haven't created an object, the non-static method doesn't exist yet. A static method (by definition) always exists.

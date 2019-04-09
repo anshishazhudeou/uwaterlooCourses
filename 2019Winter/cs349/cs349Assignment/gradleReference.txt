@@ -1,0 +1,73 @@
+how to compile a single class file in java?
+
+javac Hello.java
+ls
+> Hello.class Hello.java
+java Hello
+
+---------------------------------------------------------
+Gradle
+
+structure
+
+|------ build.gradle
+|
+|------src
+|		|
+		------Hello.java
+
+
+build.gradle:
+
+apply plugin : 'application'    			<- this is a Java application
+mainClassName = "Hello"						<- the name of the class to run
+sourceSets.main.java.srcDirs = ['src']      <- subdirectory containing code
+
+
+
+src
+├── main
+│ └── java
+│   └── com
+│     └── petehouston
+│       └── greet
+│         ├── Greet.java
+│         └── Program.java
+
+
+packename in each class and mainClassName in gradle file: either from src or java (excluded) but it has to be consisted. prefer after java.
+
+
+command: 
+$ gradle build
+BUILD SUCCESSFUL in 0s
+5 actionable tasks: 5 up-to-date $ gradle run
+> Task :run
+Hello Gradle!
+
+-----------------------------------------------------------------------------------
+How to use jar file
+
+
+jar {
+  manifest {
+  attributes ‘Main-Class’ : ‘com.petehouston.greet.Program’
+  }
+  baseName = ‘greet-program’
+  version = ‘0.1.0’
+}
+
+
+$ java -jar build/libs/*.jar
+-----------------------------------------------------------------------------------
+An artifact is a file, usually a JAR, that gets deployed to a Maven repository.
+
+A Maven build produces one or more artifacts, such as a compiled JAR and a "sources" JAR.
+
+Each artifact has a group ID (usually a reversed domain name, like com.example.foo), an artifact ID (just a name), and a version string. The three together uniquely identify the artifact.
+
+A project's dependencies are specified as artifacts.
+
+----------------------------------------------------------------------------------------------------------
+It works nicely, but too much verbose. We can suppress the output build log by adding the quiet option.
+$ gradle run -q
